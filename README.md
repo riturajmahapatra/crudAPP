@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Name - README</title>
-</head>
+
 <body style="font-family: sans-serif; margin: 0; padding: 20px;">
-  <h1 style="text-align: center; font-size: 2em;">Project Name</h1>
-  <p>[Short description]</p>
+  <h1 style="text-align: center; font-size: 2em;">Crud App</h1>
+  <p>A CRUD app is a fundamental web application that allows users to perform Create, Read, Update, and Delete operations on data.</p>
 
   **Prerequisites:**
 
@@ -48,11 +42,8 @@ MONGODB_PASSWORD=...
     <li>Client (if applicable): `cd client; npm start` or `yarn start`.</li>
   </ol>
 
-  **Usage:**
 
-  <p>[Brief instructions]</p>
-
-  **License:** [License name]
+ 
 
   <div class="contact" style="text-align: center; margin-top: 20px;">
     <span> How to reach me:</span> <a href="mailto:riturajmahapatra@gmail.com">riturajmahapatra@gmail.com</a>
