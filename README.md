@@ -26,12 +26,14 @@
     <li>Create cluster & database.</li>
     <li>
       Add `.env` file (root dir):
-      <pre style="background-color: #eee; padding: 10px;">MONGODB_URI=...
-MONGODB_USERNAME=...
-MONGODB_PASSWORD=...
+      <pre style="background-color: #eee; padding: 10px;">
+      PORT=...
+      MONGODB_URL=...
+
       </pre>
       **Important:** Don't commit `.env`!
     </li>
+
   </ol>
 
 **Running (VS Code):**
