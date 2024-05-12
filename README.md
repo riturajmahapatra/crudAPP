@@ -49,12 +49,6 @@ MONGODB_PASSWORD=...
     <span> How to reach me:</span> <a href="mailto:riturajmahapatra@gmail.com">riturajmahapatra@gmail.com</a>
   </div>
 
-  <div class="icons" style="text-align: center; margin-top: 20px;">
-    <i class="far fa-handshake" style="font-size: 1.5em; margin-right: 10px; color: #ccc;"></i> I'm looking to collaborate on big projects
-    <br>
-    <i class="fas fa-question" style="font-size: 1.5em; margin-right: 10px; color: #ccc;"></i> I'm looking for help with finding new opportunities
-    <br>
-    <i class="fas fa-comment" style="font-size: 1.5em; margin-right: 10px; color: #ccc;"></i> Ask me about my journey, it's interesting
-  </div>
+  
 </body>
-</html>
+
