@@ -1,15 +1,14 @@
-
 <body style="font-family: sans-serif; margin: 0; padding: 20px;">
   <h1 style="text-align: center; font-size: 2em;">Crud App</h1>
   <p>A CRUD app is a fundamental web application that allows users to perform Create, Read, Update, and Delete operations on data.</p>
 
-  **Prerequisites:**
+**Prerequisites:**
 
   <ul>
     <li>Node.js 16.x+ (<a href="https://nodejs.org/en/">https://nodejs.org/en/</a>)</li>
   </ul>
 
-  **Setup (VS Code):**
+**Setup (VS Code):**
 
   <ol>
     <li>Clone repo (if using Git).</li>
@@ -18,7 +17,7 @@
     <li>Install deps: <code>npm install</code> or <code>yarn install</code>.</li>
   </ol>
 
-  **Configuration:**
+**Configuration:**
 
   <ol>
     <li>
@@ -35,20 +34,15 @@ MONGODB_PASSWORD=...
     </li>
   </ol>
 
-  **Running (VS Code):**
+**Running (VS Code):**
 
   <ol>
-    <li>Server: `cd server; npm start` or `yarn start`.</li>
-    <li>Client (if applicable): `cd client; npm start` or `yarn start`.</li>
+    <li>Backend: `cd Backend; npm start`.</li>
+    <li>Frontend : `cd Frontend; npm run dev`.</li>
   </ol>
-
-
- 
 
   <div class="contact" style="text-align: center; margin-top: 20px;">
     <span> How to reach me:</span> <a href="mailto:riturajmahapatra@gmail.com">riturajmahapatra@gmail.com</a>
   </div>
 
-  
 </body>
-
