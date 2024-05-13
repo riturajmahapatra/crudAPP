@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
 export default function UserList() {
@@ -14,8 +15,20 @@ export default function UserList() {
     fetchData();
   }, []);
 
+  const deleteUser = async (userId) => {
+    try {
+      const response = await axios.delete(
+        `http://localhost:8000/api/delete/${userId}`
+      );
+      toast.success(response.data.msg, { position: 'top-right' });
+      setUsers((prevUsers) => prevUsers.filter((user) => user._id !== userId));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
-    <div className="contianer max-w-[1200px] mt-16 text-left grid m-auto">
+    <div className="contianer max-w-[1200px] mt-16 text-left grid m-auto mb-5">
       <Link to="/add" className="text-2xl font-bold underline">
         Add User
       </Link>
@@ -53,6 +66,7 @@ export default function UserList() {
                   <button
                     title="Delete User"
                     className="px-2 py-1 text-white bg-red-500 rounded hover:bg-red-700 "
+                    onClick={() => deleteUser(user._id)}
                   >
                     <i className="ri-delete-bin-line"></i>
                   </button>
