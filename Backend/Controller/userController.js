@@ -11,7 +11,7 @@ export const create = async (req, res) => {
       return res.status(404).json({ msg: 'User data not found' });
     }
     const savedData = await userData.save(); //saving the data
-    res.status(200).json(savedData);
+    res.status(200).json({ savedData, msg: 'User created Sucessfully' });
   } catch (err) {
     res.status(500).json({ err: err });
   }
@@ -26,6 +26,21 @@ export const getAll = async (req, res) => {
       return res.status(404).json({ msg: 'User data not found' });
     }
     res.status(200).json(userData);
+  } catch (error) {
+    res.status(500).json({ error: error });
+  }
+};
+
+//fetch one
+
+export const getOne = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const userExist = await User.findById(id);
+    if (!userExist) {
+      return res.status(404).json({ msg: 'User not found' });
+    }
+    res.status(200).json(userExist);
   } catch (error) {
     res.status(500).json({ error: error });
   }
