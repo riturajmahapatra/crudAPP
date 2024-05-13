@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import './index.css';
+import Add from './components/Add.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,8 +19,8 @@ const router = createBrowserRouter([
     element: 'updated page rendered',
   },
   {
-    path: '/',
-    element: <App />,
+    path: '/add',
+    element: <Add />,
   },
 ]);
 
