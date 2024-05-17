@@ -5,13 +5,13 @@ import User from '../Model/userModel.js';
 
 export const create = async (req, res) => {
   try {
-    const userData = new User(req.body); //connecting with the user schema {User}
-
+    const userData = new User(req.body);
+    console.log(userData);
     if (!userData) {
       return res.status(404).json({ msg: 'User data not found' });
     }
-    const savedData = await userData.save(); //saving the data
-    res.status(200).json({ savedData, msg: 'User created Sucessfully' });
+    const savedData = await userData.save();
+    return res.status(200).json({ savedData, msg: 'User created Sucessfully' });
   } catch (err) {
     res.status(500).json({ err: err });
   }

@@ -25,7 +25,7 @@ export default function Add() {
         'http://localhost:8000/api/create',
         inputValue
       );
-      //   console.log(response);
+      console.log(response);
       toast.success(response.data.msg, {
         position: 'top-right',
       });
@@ -52,6 +52,7 @@ export default function Add() {
           </label>
           <input
             onChange={inputHandler}
+            required
             type="text"
             id="fname"
             name="fname"
@@ -70,6 +71,7 @@ export default function Add() {
             onChange={inputHandler}
             type="text"
             id="lname"
+            required
             name="lname"
             placeholder="Enter your last name"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -86,6 +88,7 @@ export default function Add() {
             onChange={inputHandler}
             type="email"
             id="email"
+            required
             name="email"
             placeholder="Enter your email address"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -103,6 +106,7 @@ export default function Add() {
             type="password"
             id="password"
             name="password"
+            required
             placeholder="Enter your password"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
