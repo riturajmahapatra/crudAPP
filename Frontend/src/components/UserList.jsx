@@ -75,9 +75,9 @@ export default function UserList() {
                     title="Edit User"
                     className="px-2 py-1 text-white bg-blue-500 rounded hover:bg-blue-700"
                   >
-                    <a href="/edit">
+                    <Link to={'/edit/' + user._id}>
                       <i className="ri-edit-box-line"></i>
-                    </a>
+                    </Link>
                   </button>
                 </td>
               </tr>
