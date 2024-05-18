@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom';
 export default function UserList() {
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get('http://localhost:8000/api/getall');
-      setUsers(response.data);
-    };
+  const fetchData = async () => {
+    const response = await axios.get('http://localhost:8000/api/getall');
+    console.log(response);
+    setUsers(response.data);
+  };
 
+  useEffect(() => {
     fetchData();
   }, []);
 
@@ -20,8 +21,8 @@ export default function UserList() {
       const response = await axios.delete(
         `http://localhost:8000/api/delete/${userId}`
       );
+      fetchData();
       toast.success(response.data.msg, { position: 'top-right' });
-      setUsers((prevUsers) => prevUsers.filter((user) => user._id !== userId));
     } catch (error) {
       console.error(error);
     }
