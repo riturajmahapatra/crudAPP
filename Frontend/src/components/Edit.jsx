@@ -20,7 +20,9 @@ export const Edit = () => {
   };
 
   const editData = async () => {
-    const response = await axios.get(`http://localhost:8000/api/getone/${id}`);
+    const response = await axios.get(
+      `https://crud-app-server-gray.vercel.app/api/getone/${id}`
+    );
     console.log(response);
     setUser(response.data);
   };
@@ -32,7 +34,7 @@ export const Edit = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     await axios
-      .put(`http://localhost:8000/api/update/${id}`, user)
+      .put(`https://crud-app-server-gray.vercel.app/api/update/${id}`, user)
       .then((response) => {
         toast.success(response.data.msg, { position: 'top-right' });
         navigate('/');

@@ -22,7 +22,7 @@ export default function Add() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:8000/api/create',
+        'https://crud-app-server-gray.vercel.app/api/create',
         inputValue
       );
       console.log(response);
