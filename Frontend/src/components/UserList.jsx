@@ -30,6 +30,9 @@ export default function UserList() {
 
   return (
     <div className="contianer max-w-[1200px] mt-16 text-left grid m-auto mb-5">
+      <h1 className="text-6xl font-bold my-6 underline text-zinc-600 flex justify-center items-center">
+        CRUD APP
+      </h1>
       <Link to="/add" className="text-2xl font-bold underline">
         Add User
       </Link>

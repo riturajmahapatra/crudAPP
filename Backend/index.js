@@ -1,5 +1,5 @@
 import express from 'express';
-import mongoose, { connect } from 'mongoose';
+import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import cors from 'cors';
@@ -26,3 +26,5 @@ mongoose
 
 //api connection
 app.use('/api', route);
+
+export default app;
