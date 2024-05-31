@@ -1,4 +1,5 @@
 import User from '../Model/userModel.js';
+import express from 'express';
 // api crations
 
 //create
