@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import route from './Routes/userRoute.js';
+// import route from './Routes/userRoute.js';
 
 const app = express();
 app.use(bodyParser.json());
@@ -24,7 +24,11 @@ mongoose
     console.error('Error connecting to MongoDB: ', err);
   });
 
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+
 //api connection
-app.use('/api', route);
+// app.use('/api', route);
 
 export default app;
