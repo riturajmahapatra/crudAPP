@@ -32,6 +32,8 @@
 
       </pre>
       **Important:** Don't commit `.env`!
+
+
     </li>
 
   </ol>
@@ -42,6 +44,19 @@
     <li>Backend: `cd Backend; npm start`.</li>
     <li>Frontend : `cd Frontend; npm run dev`.</li>
   </ol>
+
+**Running (in Versel):**
+
+  <ul> 
+  create a new file in the root of your backend with the name : "vercel.json" and add the following code in that
+  <li>
+  {
+  "version": 2,
+  "builds": [{ "src": "./index.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/" }]
+}
+</li>
+   </ul>
 
   <div class="contact" style="text-align: center; margin-top: 20px;">
     <span> How to reach me:</span> <a href="mailto:riturajmahapatra@gmail.com">riturajmahapatra@gmail.com</a>
